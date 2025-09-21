@@ -57,6 +57,11 @@ export const CRYPTOFRAME_VAULT_ABI = [
         "internalType": "uint256",
         "name": "_vaultId",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
       }
     ],
     "name": "withdrawFromVault",
@@ -105,11 +110,59 @@ export const CRYPTOFRAME_VAULT_ABI = [
             "internalType": "bool",
             "name": "isActive",
             "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "contributionCount",
+            "type": "uint256"
           }
         ],
         "internalType": "struct CryptoFrameVault.VaultInfo",
         "name": "",
         "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_vaultId",
+        "type": "uint256"
+      }
+    ],
+    "name": "isTargetReached",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_vaultId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserContribution",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",

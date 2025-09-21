@@ -1,15 +1,15 @@
 # CryptoFrame Vault
 
-A fully homomorphic encryption (FHE) based vault system for confidential NFT finance. This application enables encrypted storage and operations on sensitive financial data using advanced cryptographic techniques.
+A secure vault system for NFT finance with privacy features. This application enables secure storage and operations on financial data with advanced security measures.
 
 ## Features
 
-- **FHE-Encrypted Vaults**: Create and manage vaults with fully homomorphic encryption
+- **Secure Vaults**: Create and manage vaults with privacy features
 - **Wallet Integration**: Connect with popular wallets like MetaMask, Rainbow, and more
-- **Confidential Operations**: All sensitive data remains encrypted during computation
+- **Private Operations**: Secure financial operations with privacy protection
 - **NFT Gallery**: Browse and manage NFT collections
-- **Secure Lending**: Participate in encrypted lending protocols
-- **Real-time Valuations**: Get encrypted valuations for your assets
+- **Secure Lending**: Participate in secure lending protocols
+- **Real-time Valuations**: Get secure valuations for your assets
 
 ## Technologies Used
 
@@ -17,7 +17,7 @@ A fully homomorphic encryption (FHE) based vault system for confidential NFT fin
 - **UI Components**: shadcn/ui, Tailwind CSS
 - **Wallet Integration**: RainbowKit, Wagmi, Viem
 - **Blockchain**: Ethereum Sepolia Testnet
-- **Encryption**: FHE (Fully Homomorphic Encryption)
+- **Privacy**: Advanced privacy protection features
 - **Smart Contracts**: Solidity 0.8.19
 
 ## Getting Started
@@ -113,15 +113,15 @@ src/
 └── assets/             # Static assets
 
 contracts/
-├── CryptoFrameVault.sol # Main FHE vault contract
+├── CryptoFrameVault.sol # Main vault contract
 └── scripts/
     └── deploy.ts        # Deployment script
 ```
 
 ## Security Features
 
-- **FHE Encryption**: All sensitive data is encrypted using fully homomorphic encryption
-- **Zero-Knowledge Operations**: Perform computations without revealing data
+- **Privacy Protection**: Advanced privacy features for sensitive data
+- **Secure Operations**: Perform operations with privacy protection
 - **Secure Wallet Integration**: Industry-standard wallet connection protocols
 - **Audited Smart Contracts**: Contracts follow security best practices
 
@@ -144,7 +144,7 @@ For support and questions, please open an issue on GitHub or contact the develop
 ## Roadmap
 
 - [ ] Multi-chain support
-- [ ] Advanced FHE operations
+- [ ] Advanced privacy operations
 - [ ] Mobile wallet integration
 - [ ] Enhanced security features
 - [ ] Community governance
