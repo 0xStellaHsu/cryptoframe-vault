@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Lock, Shield, Zap, ArrowRight } from "lucide-react";
+import { Key, Database, Zap, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/nft-gallery-hero.jpg";
 
 const HeroSection = () => {
@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Status Badge */}
           <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm">
-            <Lock className="w-4 h-4 mr-2" />
+            <Key className="w-4 h-4 mr-2" />
             Fully Homomorphic Encryption Enabled
           </Badge>
 
@@ -57,7 +57,7 @@ const HeroSection = () => {
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center space-x-2 bg-card/50 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
-              <Shield className="w-4 h-4 text-primary" />
+              <Database className="w-4 h-4 text-primary" />
               <span className="text-sm">End-to-End Encryption</span>
             </div>
             <div className="flex items-center space-x-2 bg-card/50 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
@@ -65,7 +65,7 @@ const HeroSection = () => {
               <span className="text-sm">Instant Valuations</span>
             </div>
             <div className="flex items-center space-x-2 bg-card/50 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
-              <Lock className="w-4 h-4 text-primary" />
+              <Key className="w-4 h-4 text-primary" />
               <span className="text-sm">Zero Knowledge Proofs</span>
             </div>
           </div>

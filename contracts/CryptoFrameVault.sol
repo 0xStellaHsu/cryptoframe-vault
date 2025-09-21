@@ -12,6 +12,7 @@ contract CryptoFrameVault {
     event ContributionMade(uint256 indexed vaultId, address indexed contributor, uint256 amount);
     event WithdrawalMade(uint256 indexed vaultId, address indexed withdrawer, uint256 amount);
     event VaultStatusChanged(uint256 indexed vaultId, bool isActive);
+    event EncryptedDataStored(uint256 indexed vaultId, address indexed owner, bytes32 dataHash);
 
     // Struct for vault information
     struct VaultInfo {
@@ -29,6 +30,11 @@ contract CryptoFrameVault {
     mapping(uint256 => VaultInfo) public vaults;
     mapping(address => uint256[]) public userVaults;
     mapping(uint256 => mapping(address => uint256)) public userContributions;
+    
+    // Encrypted data storage
+    mapping(uint256 => bytes32) public encryptedDataHashes;
+    mapping(uint256 => string) public encryptedData;
+    mapping(uint256 => address) public dataOwners;
 
     // Modifiers
     modifier onlyVaultCreator(uint256 _vaultId) {
@@ -208,6 +214,58 @@ contract CryptoFrameVault {
         
         // Reset vault current amount
         vaults[_vaultId].currentAmount = 0;
+    }
+
+    /**
+     * @dev Store encrypted data in vault
+     * @param _vaultId ID of the vault
+     * @param _encryptedData Encrypted data string
+     * @param _dataHash Hash of the original data for verification
+     */
+    function storeEncryptedData(
+        uint256 _vaultId,
+        string memory _encryptedData,
+        bytes32 _dataHash
+    ) public vaultExists(_vaultId) {
+        require(vaults[_vaultId].creator == msg.sender, "Only vault creator can store data");
+        
+        encryptedData[_vaultId] = _encryptedData;
+        encryptedDataHashes[_vaultId] = _dataHash;
+        dataOwners[_vaultId] = msg.sender;
+        
+        emit EncryptedDataStored(_vaultId, msg.sender, _dataHash);
+    }
+
+    /**
+     * @dev Get encrypted data from vault
+     * @param _vaultId ID of the vault
+     * @return string Encrypted data
+     */
+    function getEncryptedData(uint256 _vaultId) 
+        public 
+        view 
+        vaultExists(_vaultId) 
+        returns (string memory) 
+    {
+        require(
+            dataOwners[_vaultId] == msg.sender || vaults[_vaultId].creator == msg.sender,
+            "Only data owner or vault creator can access data"
+        );
+        return encryptedData[_vaultId];
+    }
+
+    /**
+     * @dev Get data hash for verification
+     * @param _vaultId ID of the vault
+     * @return bytes32 Data hash
+     */
+    function getDataHash(uint256 _vaultId) 
+        public 
+        view 
+        vaultExists(_vaultId) 
+        returns (bytes32) 
+    {
+        return encryptedDataHashes[_vaultId];
     }
 
     // Fallback function to receive ETH

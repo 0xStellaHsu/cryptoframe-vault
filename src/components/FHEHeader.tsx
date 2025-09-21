@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Wallet, Shield, Lock } from "lucide-react";
+import { Wallet, Database, Key } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WalletConnect } from "./WalletConnect";
 import fheLogo from "@/assets/fhe-logo.jpg";
@@ -43,8 +43,8 @@ const FHEHeader = () => {
           {/* Wallet Connection */}
           <div className="flex items-center space-x-4">
             <Button variant="crypto" size="sm" className="hidden sm:flex">
-              <Shield className="w-4 h-4 mr-2" />
-              Secure Mode
+              <Database className="w-4 h-4 mr-2" />
+              Vault Mode
             </Button>
             <WalletConnect />
           </div>

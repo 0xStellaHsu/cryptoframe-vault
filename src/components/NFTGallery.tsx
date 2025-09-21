@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Eye, EyeOff, Lock, Unlock, DollarSign } from "lucide-react";
+import { Eye, EyeOff, Key, Unlock, DollarSign } from "lucide-react";
 import { useState } from "react";
 
 interface NFTItem {
@@ -80,7 +80,7 @@ const NFTGallery = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            <Lock className="w-4 h-4 mr-2" />
+            <Key className="w-4 h-4 mr-2" />
             Confidential Gallery
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -140,7 +140,7 @@ const NFTGallery = () => {
                   {viewMode === 'encrypted' && nft.encrypted && (
                     <div className="absolute inset-0 bg-gradient-encrypted flex items-center justify-center">
                       <div className="text-center">
-                        <Lock className="w-8 h-8 text-primary mx-auto mb-2 animate-crypto-pulse" />
+                        <Key className="w-8 h-8 text-primary mx-auto mb-2 animate-crypto-pulse" />
                         <span className="text-sm font-medium text-muted-foreground">
                           FHE ENCRYPTED
                         </span>
@@ -155,7 +155,7 @@ const NFTGallery = () => {
                       className="flex items-center space-x-1"
                     >
                       {nft.encrypted ? (
-                        <Lock className="w-3 h-3" />
+                        <Key className="w-3 h-3" />
                       ) : (
                         <Unlock className="w-3 h-3" />
                       )}
@@ -205,7 +205,7 @@ const NFTGallery = () => {
                       size="sm"
                       className="px-4"
                     >
-                      <Lock className="w-4 h-4" />
+                      <Key className="w-4 h-4" />
                     </Button>
                   </div>
                 </div>

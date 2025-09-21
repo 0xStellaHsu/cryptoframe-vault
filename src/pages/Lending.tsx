@@ -3,7 +3,7 @@ import DigitalFooter from "@/components/DigitalFooter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Coins, Shield, Clock, Percent, ArrowRight, Lock, Users, TrendingUp } from "lucide-react";
+import { Coins, Database, Clock, Percent, ArrowRight, Key, Users, TrendingUp } from "lucide-react";
 
 const Lending = () => {
   return (
@@ -28,7 +28,7 @@ const Lending = () => {
               private through our encrypted lending protocol.
             </p>
             <Button variant="vault" size="lg" className="animate-gold-glow">
-              <Shield className="w-5 h-5 mr-2" />
+              <Database className="w-5 h-5 mr-2" />
               Start Lending Process
             </Button>
           </div>
@@ -150,7 +150,7 @@ const Lending = () => {
                     <span className="text-sm">8-12% APR</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-primary" />
+                    <Database className="w-4 h-4 text-primary" />
                     <span className="text-sm">Fully encrypted</span>
                   </li>
                 </ul>
@@ -175,7 +175,7 @@ const Lending = () => {
                     <span className="text-sm">6-10% APR</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-background" />
+                    <Database className="w-4 h-4 text-background" />
                     <span className="text-sm">Priority processing</span>
                   </li>
                 </ul>
@@ -200,7 +200,7 @@ const Lending = () => {
                     <span className="text-sm">4-8% APR</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-primary" />
+                    <Database className="w-4 h-4 text-primary" />
                     <span className="text-sm">White-glove service</span>
                   </li>
                 </ul>

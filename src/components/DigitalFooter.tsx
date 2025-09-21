@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Shield, 
-  Lock, 
+  Database, 
+  Key, 
   Twitter, 
   Github, 
   MessageCircle,
@@ -26,7 +26,7 @@ const DigitalFooter = () => {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <div className="relative">
-                <Shield className="w-8 h-8 text-primary animate-gold-glow" />
+                <Database className="w-8 h-8 text-primary animate-gold-glow" />
                 <div className="absolute inset-0 bg-gradient-gold opacity-20 rounded animate-crypto-pulse" />
               </div>
               <div>
@@ -38,7 +38,7 @@ const DigitalFooter = () => {
               Secure NFT valuations with fully homomorphic encryption technology.
             </p>
             <Badge variant="secondary" className="text-xs">
-              <Lock className="w-3 h-3 mr-1" />
+              <Key className="w-3 h-3 mr-1" />
               Enterprise Grade Security
             </Badge>
           </div>

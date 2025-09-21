@@ -3,7 +3,7 @@ import DigitalFooter from "@/components/DigitalFooter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Shield, TrendingUp, Calculator, Lock, CheckCircle } from "lucide-react";
+import { Database, TrendingUp, Calculator, Key, CheckCircle } from "lucide-react";
 
 const Valuations = () => {
   return (
@@ -28,7 +28,7 @@ const Valuations = () => {
               Market data remains private until you decide to proceed with lending.
             </p>
             <Button variant="vault" size="lg" className="animate-gold-glow">
-              <Shield className="w-5 h-5 mr-2" />
+              <Database className="w-5 h-5 mr-2" />
               Request Valuation
             </Button>
           </div>
@@ -45,7 +45,7 @@ const Valuations = () => {
               {/* Step 1 */}
               <Card className="p-8 text-center bg-gradient-card border-border">
                 <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Lock className="w-8 h-8 text-background" />
+                  <Key className="w-8 h-8 text-background" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Submit NFT</h3>
                 <p className="text-muted-foreground">
@@ -119,19 +119,19 @@ const Valuations = () => {
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-primary" />
+                    <Database className="w-5 h-5 text-primary" />
                     <span>Fully Homomorphic Encryption</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-primary" />
+                    <Database className="w-5 h-5 text-primary" />
                     <span>Zero-knowledge proofs</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-primary" />
+                    <Database className="w-5 h-5 text-primary" />
                     <span>Confidential computing</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-primary" />
+                    <Database className="w-5 h-5 text-primary" />
                     <span>Data sovereignty guarantee</span>
                   </li>
                 </ul>
